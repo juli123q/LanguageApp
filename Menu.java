@@ -55,13 +55,13 @@ public class Menu {
     
     //Method to move in the program - first level
     /**
-     * first level of program which includes a switch case for further monement. navigation with numbers 1 to 5. 
+     * first level of program which includes a switch case for further movement. navigation with numbers 1 to 5. 
      * 
      */
     public void firstSelection() {
         System.out.println(" [1] query vocabulary.\n [2] add new vocabulary.\n [3] show vocabulary.\n [4] delete vocabulary.\n [5] exit.");
         Scanner s = new Scanner(System.in);
-        try { //Exceptionhandling in einem Block --> von hier aus alle Methoden verbunden, deshalb greift es für das ganze Programm
+        try { 
             int answer = s.nextInt();
             switch (answer) { //options first level
                 case 1: //= query vocabulary => selection of language
@@ -111,13 +111,13 @@ public class Menu {
         char select = s.next().toLowerCase().charAt(0); //dadurch wird char gelesen, Groß- & Kleinschreibung "verbessert" und was nach erstem char kommt ignoriert
         switch (select) {
             case 'a': //= query with german vocabulary displayed, so user input has to be in the foreign language
-                getBestimmungVokabel();
+                getSortedVocab(); // method to get the correct list of vocabulary????
                 print value;
                 scan 
             
                 break;
             case 'b': //= query with foreign vocabulary displayed, user input in german
-                getBestimmungVokabel();
+                getSortedVocab(); // ???
                 print key;
                 
                 break;
