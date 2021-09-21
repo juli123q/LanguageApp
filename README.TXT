@@ -4,28 +4,30 @@ App for learning foreign vocabulary
 
 
 
-Der Vokabeltrainer umfasst 2 Klassen, Trainer und Vokabeln.
+4 classes
 
-Die Klasse Vokabeln enthält die Liste aller zu erlernenden Vokabelpaare (Fremdwort und Übersetzung).
-- werden in HashMaps gelagert
-- niedrigste HashMap ist täglich, d.h. sie enthält alle Vokabeln die täglich zu wiederholen sind
-- nachfolgende HashMaps sind wöchentlich, monatlich, gelegentlich
-- richtige Vokabeln steigen in nächsthöhere HashMap auf
-- alle falsche Vokabeln verbleiben in täglich bzw. werden dorthin zurück verschoben
-- alle HashMaps haben einen int Wert, der die Tage eines Monats und somit die Häufigekit der Wiederholung repräsentieren soll
+class Menu
+- user interface to navigate the app
 
-In der Klasse Trainer wird das Hauptprogramm durchgeführt. 
-- interne Abfrage des Tages eines Monats dient zur Auswahl der passenden Hashmap
-- Bsp. 28.02.21 ist 28. Tag eines Monats int = 28 somit Auswahl der HashMap monatlich
-- nach Auswahl der HashMap Erfragen der abzufragenden Art der Vokabeln (key = Chinesisch, value = Deutsch)
-und Ausgabe des entsprechenden Strings
-- Input muss jeweils die richtige Übersetzung sein
-- Achtung bei Eingabe chinesischer Zeichen -> Chinesisch vereinfacht (kein Pinyin oder traditionell)
-- bei richtigen Input wird Vokabel in nächsthöhere HashMap verschoben
-- bei falschen Input wird Vokabel in HashMap täglich verschoben bzw. bleibt dort
-- nachdem alle Elemente der HashMap abgefragt wurden wird Durchlauf beendet und kann neu gestartet werden
+class Query
+- query and sorting of the vocabulary
+- user can choose in class Menu whether query should display the german or the foreign vocabulary, user input/answer then must be in the opposite language
+- checking correctness of user input in query 
+- after each query the vocabulary must be sorted depending on the correct answer of the user (correct input)
 
-Quellen: - Vorlesungsfolien MMP
-- Tag eines Monats - https://stackoverflow.com/questions/7226156/how-to-get-day-of-the-month
+- Sorting of vocabulary
+  4 types of vocabulary (represented by corresponding enum values)
+  - daily -> corresponds to newly added vocabulary or vocabulary that was not remembered correctly during query (incorrect user input)
+  - weekly -> contains the daily vocabulary that was remembered correctly
+  - monthly -> contains the weekly vocabulary that was remembered correctly
+  - randomly -> contains the monthly vocabulary that was remembered correctly
+  if vocabulary is remembered correctly it ascends to the next stage
+  if vocabulary is not remembered correctly it descends to daily -> regardless of current type
+
+class Vocabulary
+- creating vocabulary pairs with key and value
+- key = foreign vocabulary
+- value = german translation
+
 
 
