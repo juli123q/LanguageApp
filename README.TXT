@@ -1,17 +1,8 @@
 ------------------------------------------------------------------------
-Dies ist die README-Datei des Projekts. Hier sollten Sie Ihr Projekt
-beschreiben.
-Erzählen Sie dem Leser (jemand, der nichts über dieses Projekt weiss),
-alles, was er/sie wissen muss. Üblicherweise sollte der Kommentar 
-zumindest die folgenden Angaben umfassen:
+App for learning foreign vocabulary
 ------------------------------------------------------------------------
 
-PROJEKTBEZEICHNUNG: Vokabeltrainer
-PROJEKTZWECK: MMP
-VERSION oder DATUM: 28.02.21
-WIE IST DAS PROJEKT ZU STARTEN:
-AUTOR(EN): Julia Umbreit
-BENUTZERHINWEISE:
+
 
 Der Vokabeltrainer umfasst 2 Klassen, Trainer und Vokabeln.
 
