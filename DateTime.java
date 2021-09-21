@@ -23,10 +23,10 @@ public class DateTime {
     }
 
     /**
-     * Holt sich das aktuelle Datum und stellt es in das vorgegebene Format TT Monat JJJJ um.
-     * Quelle für das Formatieren übernommen aus dem Beispiel https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/format/DateTimeFormatter.html
+     * getting the actual date
+     * example https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/format/DateTimeFormatter.html
      * 
-     * @return das aktuelle Datum, formatiert
+     * @return the actual date, formatted
      */
     public String formattingDate() {
         DateTimeFormatter formatierer = DateTimeFormatter.ofPattern("dd. MMMM yyyy");
@@ -36,9 +36,9 @@ public class DateTime {
     }
     
     /**
-     * Holt sich die aktuelle Uhrzeit und stellt sie in das vorgegebene Format HH:MM (24-Stunden-Zählung) um.
+     * getting actual time
      * 
-     * @return die aktuelle Uhrzeit, formatiert
+     * @return the actual time, formatted
      */
     public String formattingTie() {
         DateTimeFormatter formatierer = DateTimeFormatter.ofPattern("kk:mm");
